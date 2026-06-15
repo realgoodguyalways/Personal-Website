@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-		<link rel="stylesheet" href="./css/game.css?30">
+    <link rel="stylesheet" href="./css/background.css?30">
+		<link rel="stylesheet" href="./css/main.css?30">
         <script src="https://connect-cdn.atl-paas.net/all.js" async></script>
     </head>
-    <body>
+    <body class="homePage">
+		<canvas id="bg"></canvas>
+		<div class="topBar">
+			<h2 class="Home">HOME<h4>
+			<h2 class="Github">Github<h4>
+			<h2 class="Projects">Projects<h4>
+			<h2 class="Other">Other<h4>
+		</div>
+		<br>
         <section id="content" class="ac-content">
-		<script class="fix" type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=d76dc8cfc3adb373a2b9912585fb59e05a32c021'></script> <script class="fix" type="text/javascript" src="https://freevisitorcounters.com/en/home/counter/1180183/t/0"></script>
-		<div class="main" style="background-color: #253D5B;">
+		<div class="bg">
 				<h1 class="me">Malachi Nieman<h1/>  
-				<br>
-				<h2 class="welcome">If you are seeing this there is a pretty good chance you scanned the qr code on the video game!<h2>
+				<div class="aboutMe">
+					<img src="/pics/Me.png" class="Selfie">
+					<h5>Hi, I'm Malachi Nieman, a student engineer!</h5>
+				</div>
 				<br>
 					<h1 class="high">My High Score<h1>
 				<div class="highScore">
-					<h3>Highscore: 20.183<h3>
 					<div  style="text-align: center;">
 						<img src="/pics/highScore.png" alt="highscore" class="picHigh"> 
 					</div>
 				</div>
 				<br>
-					<h1 class="Facts">Fun Facts<h1>
-					<div class="funFacts">
-					<h2 class="facts">Fact #1:<h2>
-					<h2 class="facts">The robot that you control in this videogame is currently roughly 2000 miles away<h2>
-					<h2 class="facts">Fact #2:<h2>
-					<h2 class="facts">If you get the highest score of the game then you get a really cool piece of bling<h2>
-					<h2 class="facts">Fact #3:<h2>
-					<h2 class="facts">This videogame has the fastest racetrack in all of North America<h2>
-					<h4>Facts supplied by peter<h4>
-					<img src="/pics/peter.jpg" alt="peter"> 
-					<h4>if you see peter, say malachi says hi!<h4>
-					<h4>peter, if you see this, make sure to count how many people say hi on my behalf <h4>
+				<div>
+
 				</div>
 				<br>
 					<h1 class="contact">Contact Me!<h1>
@@ -41,5 +40,6 @@
 				</div>
 			</div>
         </section>
+		<script src="background.js"></script>
     </body>
 </html>
