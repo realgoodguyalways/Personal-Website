@@ -1,0 +1,343 @@
+#content {
+  color: aliceblue;
+}
+
+.main {
+  text-align: left;
+  line-height: 1 !important;
+  z-index: 1;
+}
+
+.highScore {
+  background-color: #67697c;
+  text-align: center;
+  border-radius: 25px;
+  width: 95%;
+  margin-left: 2%;
+  margin-right: 10%;
+}
+.high {
+  color: #84bcda;
+  text-align: center !important;
+}
+
+.funFacts {
+  background-color: #67697c;
+  text-align: center;
+  border-radius: 25px;
+  width: 95%;
+  margin-left: 2%;
+  margin-right: 10%;
+}
+.Facts {
+  color: #84bcda;
+  text-align: center !important;
+}
+
+.Contact {
+  background-color: #67697c;
+  text-align: center;
+  border-radius: 25px;
+  width: 95%;
+  margin-left: 2%;
+  margin-right: 10%;
+}
+.contact {
+  color: #84bcda;
+  text-align: center !important;
+}
+
+.Title,
+.top-Title {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.top-Title {
+  margin-top: 75px !important;
+}
+
+.me {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.welcome {
+  text-align: center;
+}
+
+#h1,
+#h2,
+#h3,
+#h4 {
+  text-align: center;
+}
+
+.facts {
+  text-align: left !important;
+}
+
+.fix {
+  position: fixed !important;
+  top: 10px !important;
+  right: 10px !important;
+  text-align: none !important;
+}
+
+.topBar:not(.Home) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  background-color: #67697c;
+  opacity: 0.95;
+  border-bottom: 2px solid black;
+  width: 100%;
+  border-bottom-left-radius: 40px;
+  top: 0;
+  left: 0;
+  height: 55px;
+  padding: 0 20px;
+  z-index: 100;
+}
+
+.topBar a,
+.menu-right a,
+.dropdown a,
+.dropdown2 a,
+.GithubLink,
+.topBar > a {
+  position: static !important;
+  bottom: auto !important;
+  right: auto !important;
+}
+
+.menu-right {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  margin-right: 0px;
+  right: 0px;
+  margin-top: 0px;
+}
+
+.Home,
+.Github,
+.Projects,
+.Other {
+  margin: 0;
+  padding: 0 16px;
+  color: white;
+  font-weight: 600;
+  line-height: 55px;
+  text-decoration: none;
+  width: 210px;
+  text-decoration-color: #676767;
+}
+
+.topBar:not(.Home) > a,
+.nav-item,
+.GithubLink {
+  display: inline-flex;
+  align-items: center;
+  height: 55px;
+}
+
+.menu-right > a {
+  border-left: 2px solid black;
+  background-color: #5d5e6f;
+}
+
+.Home {
+  border-left: none;
+  background-color: transparent;
+  padding-left: 0px;
+  color: aliceblue;
+  margin-left: 100px;
+}
+
+.GithubLink {
+  border-left: 2px solid black;
+  background-color: #5d5e6f;
+}
+
+.Projects,
+.Other {
+  border-left: 2px solid black;
+  background-color: #525463;
+  cursor: pointer;
+}
+
+.Other {
+  background-color: #484956;
+}
+
+.nav-item {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.dropdown,
+.dropdown2 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #67676c;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  min-width: 160px;
+  width: 100%;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+  white-space: nowrap;
+}
+
+.dropdown li,
+.dropdown2 li {
+  list-style: none;
+  display: block;
+  width: 100%;
+}
+
+.dropdown a,
+.dropdown2 a {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav-item:hover .dropdown,
+.nav-item:hover .dropdown2 {
+  display: block;
+}
+
+.dropdown,
+.dropdown2 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #67676c;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+}
+
+.dropdown li,
+.dropdown2 li {
+  list-style: none;
+}
+
+.dropdown a,
+.dropdown2 a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown a:hover,
+.dropdown2 a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Option {
+  margin: 0;
+}
+
+.aboutMe {
+  display: flex;
+  margin-left: 20%;
+  flex-direction: row;
+  align-items: center;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bio {
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.Selfie {
+  width: 75%;
+  height: 250%;
+  border-radius: 25px;
+  border: 6px solid transparent;
+  background-image: linear-gradient(black, black),
+    linear-gradient(to bottom, #676767, black);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+
+.break {
+  background-color: #676767;
+  border-color: #676767;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 4px;
+}
+
+.projects-main,
+.mentors {
+  display: grid;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 45px;
+  list-style-type: none;
+}
+
+.mentor,
+.project {
+  text-align: center;
+}
+
+.picMentors,
+.picProjects {
+  width: 50%;
+  height: auto;
+  border-radius: 100%;
+  border: 4px solid #676767;
+}
+
+.bioList {
+}
+
+.biolist {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 45px;
+}
+
+.home,
+.GithubLink {
+  text-decoration-color: #676767;
+}
+
+.home:hover,
+.GithubLink:hover {
+  text-decoration-color: aliceblue;
+}
