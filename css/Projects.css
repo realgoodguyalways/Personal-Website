@@ -187,48 +187,49 @@
     vertical-align: middle;
     }
 
-    .dropdown,
-    .dropdown2 {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #67676c;
-    list-style: none;
-    padding: 8px 0;
-    margin: 0;
-    min-width: 160px;
-    width: 100%;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 200;
-    white-space: nowrap;
-    }
-
     .dropdown li,
     .dropdown2 li {
     list-style: none;
     display: block;
     width: 100%;
+    opacity: 1;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+
+    transition: border 0.2 ease;
     }
 
-    .dropdown a,
-    .dropdown2 a {
-    display: block;
-    width: 100%;
-    padding: 12px 20px;
-    color: white;
-    text-decoration: none;
-    text-align: center;
+    .dropdown li:hover,
+    .dropdown2 li:hover {
+        border-bottom: 2px solid black;
     }
 
-    .nav-item:hover .dropdown,
-    .nav-item:hover .dropdown2 {
-    display: block;
+
+    .nav-item-projects, 
+    .nav-item-other {
+        position: relative;
+        top: 100%;
+        display: grid;
+        grid-template-rows: 0fr;
+        
+        transition: grid-template-rows 0.3s ease;
+    }
+
+    .nav-item-projects:hover, 
+    .nav-item-other:hover {
+        grid-template-rows: 1fr;
+    }
+
+    .nav-item-projects:hover .dropdown,
+    .nav-item-other:hover .dropdown2 {
+        visibility: visible;
+        opacity: 1;
     }
 
     .dropdown,
     .dropdown2 {
-    display: none;
+    display: block;
     position: absolute;
     top: 100%;
     left: 0;
@@ -236,14 +237,13 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    min-width: 160px;
+    min-width: 100%;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 200;
-    }
+    opacity: 0;
+    visibility: hidden;
 
-    .dropdown li,
-    .dropdown2 li {
-    list-style: none;
+    transition: opacity 0.3s ease;
     }
 
     .dropdown a,
@@ -254,11 +254,17 @@
     padding: 12px 20px;
     color: white;
     text-decoration: none;
+    border-left: 0px solid black;
+    border-right: 0px solid black;
+    border-bottom: 0px solid black;
+
+    transition: background-color 0.3s ease, border-bottom 0.1s ease;
     }
 
     .dropdown a:hover,
     .dropdown2 a:hover {
     background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 3px solid black;
     }
 
     .Option {
@@ -370,7 +376,19 @@ desc {
 .titleT {
     text-align: center;
     margin-top: 45px;
+
+    animation: slideIn 0.3s ease;
 }
+
+@keyframes slideIn {
+    from { 
+        transform:translateY(-100%);
+    }
+    to{
+        transform:translateY(0%);
+    }
+}
+
 
 .titleT2 {
     text-align: center;
@@ -388,8 +406,43 @@ desc {
 .picT {
     align-items: center;
     width: 40%;
-    margin-left: 30%;
+    margin-left: -100%;
     margin-right: 30%;
     height: auto;
     border-radius: 25px;
+    
+    animation: leftSlide 0.5s ease;
+    animation-delay: 0.75s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes leftSlide {
+    from {
+        margin-left: -100%;
+    }
+    to {
+        margin-left: 30%;
+    }
+}
+
+.projectButton {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    margin-left: 40%;
+    margin-right: 40%;
+    width: 20%;
+    height: 50px;
+    border: 2px solid aliceblue;
+    opacity:90%;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #67697c;
+    color: aliceblue;
+
+    transition: background-color 0.3s ease, border-width 0.3s ease;
+}
+
+.projectButton:hover {
+    background-color: #5d5e6f;
+    border-width: 4px;
 }
