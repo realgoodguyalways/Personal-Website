@@ -441,27 +441,42 @@ desc {
     text-align: center;
     margin-left: 10%; 
     margin-right: 10%;
+    clip-path: inset(0 100% 0 0);
+}
+
+.descT.animate {
+    animation: reveal 0.3s ease forwards 0.25s;
+}
+
+@keyframes reveal {
+    from {
+        clip-path: inset(0 100% 0 0)
+    }
+    to {
+        clip-path: inset(0 0 0 0)
+    }
 }
 
 .picT {
     align-items: center;
     width: 40%;
-    margin-left: -100%;
     margin-right: 30%;
     height: auto;
     border-radius: 25px;
-    
-    animation: leftSlide 0.5s ease;
-    animation-delay: 0.75s;
-    animation-fill-mode: forwards; 
+
+    transform: translateX(-100%);
+}
+
+.picT.animate {
+    animation: leftSlide 0.3s ease forwards;
 }
 
 @keyframes leftSlide {
     from {
-        margin-left: -100%;
+        transform: translateX(-150%);
     }
     to {
-        margin-left: 30%;
+        transform: translateX(70%);
     }
 }
 
