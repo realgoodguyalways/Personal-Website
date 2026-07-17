@@ -5,6 +5,8 @@ const observer = new IntersectionObserver((entries) => {
             observer.unobserve(entry.target);
         }
     });
+}, {
+    threshold: 0.75
 });
 
-document.querySelectorAll(".picT, .descT").forEach(el => observer.observe(el));
+document.querySelectorAll(".top-Title, .mentorTitle, .projectTitle, .project, .mentor, .projectDescription").forEach(el => observer.observe(el));
