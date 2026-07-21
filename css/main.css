@@ -50,10 +50,21 @@
     padding-bottom: 4px;
     padding-top: 1px;
     opacity: 0.75;
+    clip-path: inset(0 100% 0 0);
     }
+
+    .Contact.animate {
+        animation: reveal 0.5s ease forwards;
+        animation-delay: 0.5s;
+    }
+
     .contact {
     color: #84bcda;
     text-align: center !important;
+    }
+
+    .contact.animate {
+        animation: fade-up 0.5s ease forwards;
     }
 
     .bottom {
@@ -62,7 +73,8 @@
 
     .projectTitle,
     .mentorTitle,
-    .top-Title {
+    .top-Title,
+    .githubTitle {
     width: 100%;
     text-align: center;
     margin-top: 25px;
@@ -88,6 +100,10 @@
         animation: fade-up 1s ease forwards;
     }
 
+    .githubTitle.animate {
+        animation: fade-up 1s ease forwards;
+    }
+
 
     @keyframes fade-up {
         from{
@@ -99,6 +115,15 @@
             opacity: 1;
             padding-top: 0px;
             padding-bottom: 25px;
+        }
+    }
+
+    @keyframes fade-in {
+        from{
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
         }
     }
 
@@ -515,4 +540,129 @@
 
     .home:hover {
         text-decoration-color: aliceblue;
+    }
+
+    .Insta {
+       text-decoration-color: #67697c; 
+       color: aliceblue;
+
+       transition: color 0.2s ease;
+    }
+
+    .Insta:hover {
+        color: #919090; 
+    }
+
+    .barBackground {
+        height: 10px;
+        width: 60%;
+        background-color: #676767;
+        border-radius: 10px;
+    }
+
+    .Language {
+        text-align: center;
+    }
+
+    .Stats {
+        list-style-type: none;   
+        justify-content: center;
+    }
+
+    .line {
+        display: flex;
+    }
+
+    #percentJava {
+        margin-top: -8px;
+        margin-left: 10%;
+    }
+
+    #percentC {
+        margin-top: -8px;
+        margin-left: 10%;
+    }
+
+    #percentHtml {
+        margin-top: -8px;
+        margin-left: 10%;
+    }
+
+    #percentCss {
+        margin-top: -8px;
+        margin-left: 10%;
+    }
+
+    #percentOther {
+        margin-top: -8px;
+        margin-left: 10%;
+    }
+
+     #timeJava {
+        margin-top: -8px;
+        margin-left: 5%;
+    }
+
+    #timeC {
+        margin-top: -8px;
+        margin-left: 5%;
+    }
+
+    #timeHtml {
+        margin-top: -8px;
+        margin-left: 5%;
+    }
+
+    #timeCss {
+        margin-top: -8px;
+        margin-left: 5%;
+    }
+
+    #timeOther {
+        margin-top: -8px;
+        margin-left: 5%;
+    }
+
+    #barForegroundJava {
+        height: 10px;
+        width: 61.6%;
+        background-color: red;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    #barForegroundC {
+        height: 10px;
+        width: 61.6%;
+        background-color: yellow;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    #barForegroundHtml {
+        height: 10px;
+        width: 61.6%;
+        background-color: green;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    #barForegroundCss {
+        height: 10px;
+        width: 61.6%;
+        background-color: blue;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    #barForegroundOther {
+        height: 10px;
+        width: 61.6%;
+        background-color: aliceblue;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .nothing {
+        opacity: 0;
     }

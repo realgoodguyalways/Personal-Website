@@ -1,10 +1,10 @@
-const observer = new IntersectionObserver((entries) => {
+const observer1 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add("animate");
-            observer.unobserve(entry.target);
+            observer1.unobserve(entry.target);
         }
     });
 });
 
-document.querySelectorAll(".picT, .descT").forEach(el => observer.observe(el));
+document.querySelectorAll(".picT, .descT, .titleT2, .Contact, .contact, .githubTitle").forEach(el => observer1.observe(el));
