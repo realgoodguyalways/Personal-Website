@@ -4,13 +4,13 @@ console.log("idk")
     var Java = 0;
     var C = 0;
     var Html = 0;
-    var CSS = 0;
+    var Css = 0;
     var Other = 0;
 
     var timeJava = 0;
     var timeC = 0;
     var timeHtml = 0;
-    var timeCSS = 0;
+    var timeCss = 0;
     var timeOther = 0;
 
     // vars to display %
@@ -27,12 +27,29 @@ console.log("idk")
     var cTime = document.getElementById("timeC");
     var otherTime = document.getElementById("timeOther");
 
+
     // vars to change width
     var javaWidth = document.getElementById("barForegroundJava");
     var htmlWidth = document.getElementById("barForegroundHtml");
     var cssWidth = document.getElementById("barForegroundCss");
     var cWidth = document.getElementById("barForegroundC");
     var otherWidth = document.getElementById("barForegroundOther");
+
+    const timeMap0 = new Map ([
+        ["Java", javaTime ],
+        ["C", cTime ],
+        ["Html", htmlTime ],
+        ["Css", cssTime ],
+        ["Other", otherTime ],
+    ]);
+
+    const perMap0 = new Map ([
+        ["Java", javaDiv ],
+        ["C", cDiv ],
+        ["Html", htmlDiv ],
+        ["Css", cssDiv ],
+        ["Other", otherDiv ],
+    ]);
 
 
 async function functionName(response) {
@@ -73,20 +90,6 @@ async function functionName(response) {
     Css = Css/total * 100;
     Other = Other/total * 100; 
 
-    // changing % text
-    javaDiv.innerHTML = Java.toFixed(2) + "%";
-    cDiv.innerHTML = C.toFixed(2) + "%";
-    htmlDiv.innerHTML = Html.toFixed(2) + "%";
-    cssDiv.innerHTML = Css.toFixed(2) + "%";
-    otherDiv.innerHTML = Other.toFixed(2) + "%";
-
-    // changing hours text
-    javaTime.innerHTML = timeJava.toFixed(2) + "hrs";
-    cTime.innerHTML = timeC.toFixed(2) + "hrs";
-    htmlTime.innerHTML = timeHtml.toFixed(2) + "hrs";
-    cssTime.innerHTML = timeCss.toFixed(2) + "hrs";
-    otherTime.innerHTML = timeOther.toFixed(2) + "hrs";
-
     // changing bar width
     javaWidth.style.width = Java.toFixed(2) + "%";
     cWidth.style.width = C.toFixed(2) + "%";
@@ -94,3 +97,37 @@ async function functionName(response) {
     cssWidth.style.width = Css.toFixed(2) + "%";
     otherWidth.style.width = Other.toFixed(2) + "%";
 }
+
+    // changing hours text
+    export function countUpTime(element) { 
+        const timeMap1 = new Map ([
+            ["Java", timeJava ],
+            ["C", timeC ],
+            ["Html", timeHtml ],
+            ["Css", timeCss ],
+            ["Other", timeOther ],
+        ]);
+
+        for(let i = 30; i > 0; i--) {
+            setTimeout(() => {
+                timeMap0.get(element).innerHTML = (timeMap1.get(element) * i/30).toFixed(2) + "hrs";
+            }, i * 50);
+        }
+    }
+
+    // changing % text
+    export function countUpPercent(element) { 
+        const perMap1 = new Map ([
+            ["Java", Java ],
+            ["C", C ],
+            ["Html", Html ],
+            ["Css", Css ],
+            ["Other", Other ],
+        ]);
+
+        for(let i = 30; i > 1; i--) {
+            setTimeout(() => {
+                perMap0.get(element).innerHTML = (perMap1.get(element)* i/30).toFixed(2) + "%";
+            }, i * 50);
+        }
+    }

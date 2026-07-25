@@ -7,4 +7,4 @@ const observer1 = new IntersectionObserver((entries) => {
     });
 });
 
-document.querySelectorAll(".picT, .descT, .titleT2, .Contact, .contact, .githubTitle").forEach(el => observer1.observe(el));
+document.querySelectorAll(".picT, .descT, .titleT2, .Contact, .contact, .githubTitle, #barForegroundOther, #barForegroundC, #barForegroundHtml, #barForegroundCss, #barForegroundJava").forEach(el => observer1.observe(el));
