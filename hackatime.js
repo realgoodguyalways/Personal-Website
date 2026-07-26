@@ -99,35 +99,44 @@ async function functionName(response) {
 }
 
     // changing hours text
-    export function countUpTime(element) { 
-        const timeMap1 = new Map ([
-            ["Java", timeJava ],
-            ["C", timeC ],
-            ["Html", timeHtml ],
-            ["Css", timeCss ],
-            ["Other", timeOther ],
-        ]);
+    export function countUpTime(element) {
+        if (timeC != 0) {
+            const timeMap1 = new Map ([
+                ["Java", timeJava ],
+                ["C", timeC ],
+                ["Html", timeHtml ],
+                ["Css", timeCss ],
+                ["Other", timeOther ],
+            ]);
 
-        for(let i = 30; i > 0; i--) {
-            setTimeout(() => {
-                timeMap0.get(element).innerHTML = (timeMap1.get(element) * i/30).toFixed(2) + "hrs";
-            }, i * 50);
+
+            for(let i = 30; i > 0; i--) {
+                setTimeout(() => {
+                    timeMap0.get(element).innerHTML = (timeMap1.get(element) * i/30).toFixed(2) + "hrs";
+                }, i * 50);
+            }
+        } else {
+            setTimeout(() => countUpTime(element), 500);
         }
     }
 
     // changing % text
     export function countUpPercent(element) { 
-        const perMap1 = new Map ([
-            ["Java", Java ],
-            ["C", C ],
-            ["Html", Html ],
-            ["Css", Css ],
-            ["Other", Other ],
-        ]);
+        if (timeC != 0) {
+            const perMap1 = new Map ([
+                ["Java", Java ],
+                ["C", C ],
+                ["Html", Html ],
+                ["Css", Css ],
+                ["Other", Other ],
+            ]);
 
-        for(let i = 30; i > 1; i--) {
-            setTimeout(() => {
-                perMap0.get(element).innerHTML = (perMap1.get(element)* i/30).toFixed(2) + "%";
-            }, i * 50);
+            for(let i = 30; i > 1; i--) {
+                setTimeout(() => {
+                    perMap0.get(element).innerHTML = (perMap1.get(element)* i/30).toFixed(2) + "%";
+                }, i * 50);
+            }
+        } else {
+            setTimeout(() => countUpPercent(element), 500);
         }
     }
