@@ -16,5 +16,7 @@ This site took me about 40 hours from start to finish, and is intended to show a
 <img width="1282" height="412" alt="Screenshot 2026-07-26 213835" src="https://github.com/user-attachments/assets/eaaf8736-3744-44f4-a69f-49f3943e4d51" />
 <h4>Each of my supporting pages(as of writing, 5) have one main focus, extracirriculars, projects, etc... most of them are very similar, one or more pictures and a short description of that topic.<h4>
 <br>
+<h4>While the above features may be some of the best, or some of my favorites, I have more things on my website, such as a couple of my mentors on the main page(where clicking some of them will lead you to their personal sites), along with a shorter description of each of my projects(clicking on these will bring you to my other pages that describe that project)<h4>
+<br>
 <br>
 <h3>Thank you for checking it out! it means a lot to me!<h3>
