@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="./css/background.css?30">
+		<link rel="stylesheet" href="./css/main.css?30">
+        <script src="https://connect-cdn.atl-paas.net/all.js" async></script>
+    </head>
+    <body class="homePage">
+		<canvas id="bg"></canvas>
+		<div class="topBar">
+			<a href="http://malachinieman.com/" class="home">
+				<h2 class="Home">HOME</h2>
+			</a>
+			<div class="menu-right">
+				<a href="https://github.com/realgoodguyalways" class="GithubLink">
+					<h4 class="Github">Github</h4>
+				</a>
+                <div class="nav-item-projects">
+                    <h4 class="Projects">Projects</h4>
+                    <ul class="dropdown">
+						<li class="Option"><a href="Theremin.html">Theremin</a></li>
+						<li class="Option"><a href="EZOllama.html">EZOllama</a></li>
+					</ul>
+				</div>
+				<div class="nav-item-other">
+					<h4 class="Other">Other</h4>
+					<ul class="dropdown2">
+						<li class="Option"><a href="Robotics.html">Robotics</a></li>
+						<li class="Option"><a href="Volleyball.html">Volleyball</a></li>
+						<li class="Option"><a href="Esports.html">E-Sports</a></li>
+                        </ul>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<br>
+        <section id="content" class="ac-content">
+		<div class="bg">
+				<h1 class="top-Title">Malachi Nieman</h1>  
+				<div class="aboutMe">
+					<ul class="biolist">
+						<!--<li class ="bioList">
+							<img src="/pics/selfie.jpg" class="Selfie" />
+						</li> -->
+						<li class ="bioList">
+							<h3 class="bio1">Hello, I am Malachi Nieman, a student engineer currently attending De La Salle Collegiate in Michigan.</h3>
+							<h3 class="bio2">I enjoy programming, electronics, and of course learning new things.</h3>
+							<h3 class="bio3">I am currently working on starting a hack club at my high school.</h3>
+						</li>
+					</ul>
+				</div>
+				<br>
+				<div class="intro">
+					<hr class="break">
+				</div>
+				<h1 class="projectTitle">Projects</h1>
+				<ul class="projects-main">
+					<li class="project"> <!--copy this to add another project-->
+						<h2 class="projectName">Theremin</h2>
+						<a href="https://github.com/realgoodguyalways" class="Link">
+							<img src="/pics/Theremin.jpg" class="picProjects">
+						</a>
+						<h4 class="projectDescription">My theremin is a musical instrument that is played without being touched. It is uses a ultrasonic sensor to sense the position of the player's hands, and outputs a specific MIDI signal.</h4>
+					</li> 
+					<li class="project"> <!--copy this to add another project-->
+						<h2 class="projectName">EZOllama</h2>
+						<a href="https://github.com/realgoodguyalways" class="Link">
+							<img src="/pics/EZOllama_cropped.jpg" class="picProjects">
+						</a>
+						<h4 class="projectDescription">EZOllama is an HTML file, designed to be usable in any scenario, regardless of internet connectivity. It provides an easy-to-use interface for interacting with llms on android devices via Termux using Ollama.</h4>
+					</li>
+				</ul>
+				<div class="intro">
+					<hr class="break">
+				</div>
+				<h1 class="mentorTitle">Mentors</h1>
+				<ul class="mentors">
+					<li class="mentor"> <!--copy this to add another mentor-->
+						<h2 class="mentorName">Leonard</h2>
+						<a href="https://leonardnieman.com" class="Link">
+							<img src="/pics/leonardnieman.png" class="picMentors">
+						</a>
+						<h2 class="mentorRole">Father</h2>
+					</li> 
+					<li class="mentor"> <!--copy this to add another mentor-->
+						<h2 class="mentorName">Cory</h2>
+						<img src="/pics/coryNess.jpg" class="picMentors">
+						<h2 class="mentorRole">Robotics Mentor</h2>
+					</li> 
+				</ul>
+				<br>
+				<div class="intro">
+					<hr class="break">
+				</div>
+				<h1 class="githubTitle">Wakatime Statistics</h1>
+				<ul class="Stats">
+					<li class="stat"> 
+						<h3 class="Language">C++</h3>
+						<div class="line">
+							<div class="barBackground"><div id="barForegroundC"></div></div>
+							<h2 id="percentC">%</h2>
+							<h2 id="timeC"></h2>
+						</div>
+						<!--<h3 class="mentorQuote">"My favorite Son"</h3>-->
+					</li> 
+					<li class="stat"> 
+						<h3 class="Language">Html</h3>
+						<div class="line">
+							<div class="barBackground"><div id="barForegroundHtml"></div></div>
+							<h2 id="percentHtml">%</h2>
+							<h2 id="timeHtml"></h2>
+						</div>
+						<!--<h3 class="mentorQuote">"My favorite Son"</h3>-->
+					</li> 
+					<li class="stat"> 
+						<h3 class="Language">CSS</h3>
+						<div class="line">
+							<div class="barBackground"><div id="barForegroundCss"></div></div>
+							<h2 id="percentCss">%</h2>
+							<h2 id="timeCss"></h2>
+						</div>
+						<!--<h3 class="mentorQuote">"My favorite Son"</h3>-->
+					</li> 
+					<li class="stat"> 
+						<h3 class="Language">Other</h3>
+						<div class="line">
+							<div class="barBackground"><div id="barForegroundOther"></div></div>
+							<h2 id="percentOther">%</h2>
+							<h2 id="timeOther"></h2>
+						</div>
+						<!--<h3 class="mentorQuote">"My favorite Son"</h3>-->
+					</li> 
+					<li class="nothing"> <!--- make nothing appear when I do a java proj--->
+						<h3 class="Language">Java</h3>
+						<div class="line">
+							<div class="barBackground"><div id="barForegroundJava"></div></div>
+							<h2 id="percentJava">%</h2>
+							<h2 id="timeJava"></h2>
+						</div>
+						<!--<h3 class="mentorQuote">"My favorite Son"</h3>-->
+					</li> 
+				</ul>
+				<br>
+
+					<!-- <h1 class="high">My High Score</h1>
+				<div class="highScore">
+					<div  style="text-align: center;">
+						<img src="/pics/highScore.png" alt="highscore" class="picHigh"> 
+					</div>
+				</div>
+				<br>
+				<div>
+
+				</div>
+				<br> -->
+					<h1 class="contact">Contact Me!</h1>
+				<div class="Contact">
+					<h2>if you want to talk to me, contact me at: </h2>
+					<h1>malachi.nieman@gmail.com</h1>
+					<h1><a href="" class="Insta">Instagram</a></h1>
+				</div>
+				<div class="bottom"></div>
+			</div>
+        </section>
+		<script src="background.js"></script>
+        <script src="indexAnim.js"></script>
+        <script src="Animations.js"></script>
+        <script type="module" src="countUp.js"></script>
+        <script type="module" src="hackatime.js"></script>
+    </body>
+</html>
